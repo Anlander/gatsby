@@ -1,0 +1,46 @@
+.teams {
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+    text-align: center !important;
+    width: 80%;
+    margin: 0 auto;
+    
+    p {
+        font-size: 15px;
+        padding: 25px;
+    }
+    h2 {
+        text-transform: uppercase;
+    }
+
+     a {
+        display:flex;
+        text-decoration: none;
+        text-transform: uppercase;
+        justify-content: center;    
+        margin-bottom: 50px;
+        color: #84a88e;
+
+        &:hover {
+            color:black;
+        }
+     }
+
+     img {
+         max-height: 150px;
+         max-width: 300px;
+         margin-bottom: 50px;
+         border-radius: 100%;
+     }
+}
+
+
+.single-team  {
+
+    padding: 14px;
+    margin: 10px;
+    box-shadow: 0px 0px 3px -2px;
+}
