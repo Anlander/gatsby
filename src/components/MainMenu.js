@@ -5,9 +5,11 @@ import SiteInfo from './SiteInfo';
 import "../components/sass/main-menu.scss";
 
 
+
+
+
 const MainMenuWrapper = styled.div`
  display:flex;
- background-color: rgb(3, 27, 77);
  height: 10vh;
 `
 
@@ -22,13 +24,24 @@ const MenuItem = styled(Link)`
 `
 
 const MainMenuInner = styled.div `
-    width: 100% !important; 
     margin: 0 auto;
     display:flex;
-    width:960px;
+    width:80%;
     align-self: center;
 
 `
+// function scroll () {
+//     if (window.pageYOffset > 0) {
+//         if (scroll >= 150) {
+//             this("main_menu").addClass("black");
+//         } else {
+//             this("main_menu").removeClass("black");
+//         }
+//     }
+//   }
+
+// onScroll={() => this.scroll}
+
 
 const MainMenu = () => (
     

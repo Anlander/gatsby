@@ -15,16 +15,20 @@ export default ({pageContext}) => (
             <MainMenu />
             <PageTransition>
                 <div className="main">
-                    <section className="section-flex"> 
-                        <div className="flex-1">
-                            <h2>Låt oss analysera & optimera din försäljning</h2>
-                        </div>
-                        <div className="flex-2">
-
-                        
+                    <div className="section-flex"> 
+                        <section className="flex-1">
+                            <h2>{pageContext.acf.hero_title}</h2>
+                        </section>
+                        <section className="flex-2">
+                        <img src={pageContext.acf.picture_logo.source_url} alt='thumbnail' />
+                        </section>
                     </div>
-                    </section>
+                <div>
+                        
+                     {/* <p>Down arrow: <i class="arrow down"></i></p> */}
                 </div>
+                </div>
+                
             </PageTransition>
            
             
