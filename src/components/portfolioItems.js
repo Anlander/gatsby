@@ -1,15 +1,9 @@
 import React from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby';
-import styled from 'styled-components';
 import '../components/sass/teams.scss'
 
 
-const FeutreImge = styled.img`
-    max-width: 100%;
-    display:flex;
-    margin: 0 auto;
-    max-height:100%;
-`
+
 
 
 const PortfolioItems = () => (
@@ -28,19 +22,38 @@ const PortfolioItems = () => (
                     featured_media {
                         source_url
                     }
+                    acf {
+                        work_as
+                        about
                     }
+                }
                 }
                 }
             }
       
         
     `}render={props => props.allWordpressWpPortfolio.edges.map(PortfolioItems => (
-        <div className="single-team" key={PortfolioItems.node.id}>
-            <FeutreImge src={PortfolioItems.node.featured_media.source_url} alt="thumbnail" />
-            <h2>{PortfolioItems.node.title}</h2>
-            <div dangerouslySetInnerHTML={{__html: PortfolioItems.node.excerpt}} />
-            <Link to={`/portfolio/${PortfolioItems.node.slug}`}> Read More </Link>
+        <div class="container" key={PortfolioItems.node.id}>
+        <div class="row team-row">
+
+            <div class="col-md-4 col-sm-6 team-wrap">
+            <div class="team-member text-center">
+                <div class="team-img">
+                <img src={PortfolioItems.node.featured_media.source_url} alt="" />
+                <div class="overlay">
+                    <div class="team-details text-center">
+                    <p class="team-about"> {PortfolioItems.node.acf.about} </p>
+                    </div>
+                 </div>
+                </div>
+                <h6 class="team-title">{PortfolioItems.node.title}</h6>
+                <span>{PortfolioItems.node.acf.work_as}</span>
+            </div>
+            </div>          
+            </div>
         </div>
+        
+        
         
     ))} />
 );
