@@ -28,14 +28,14 @@ const Partners = () => (
     `}render={data => (
         
       
-        <div className="logo_image_single" >
-          {data.wordpressPage.acf.logo_gallery.map((items, key)  => (
-            <div key={key}>
-              <img src={items.source_url} alt="thumbnail" />
-            </div>
-  
-          ))}
+      <div className="logo_image_single" >
+      {data.wordpressPage.acf.logo_gallery.map((items, key)  => (
+        <div key={key}>
+          <img src={items.source_url} alt="thumbnail" />
         </div>
+
+      ))}
+    </div>
 
         
         

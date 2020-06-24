@@ -68,9 +68,11 @@ const MainMenu = () => (
         
     `}render={props =>(
         // vill du ändra vilken menu, EQ : FOOTER EX. (NAMNET)
+        // Temp Fix för home link, i och med att jag ändrat settings för frontpage i CMS skapar det en http link för just myportfolio. FIX ASAP 
         <MainMenuWrapper className="main_menu">
               <MainMenuInner>
             <SiteInfo />
+            <MenuItem to="/home">Home</MenuItem>
             {props.allWordpressMenusMenusItems.edges[0].node.items.map(item =>(
                 <MenuItem to={`/${item.slug}`} key={item.title}>
                     {item.title}

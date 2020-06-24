@@ -6,6 +6,7 @@ import '../images/gatsby-icon.png'
 import Partners from '../components/partners'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Services from '../components/services'
 
 AOS.init();
 
@@ -26,37 +27,16 @@ export default ({pageContext}) => (
                         <img src={pageContext.acf.picture_logo.source_url} alt='thumbnail' />
                         </section>
                     </div> 
-
-                    
-
-                    <div className="icon-more"> 
-                        <h1 data-aos="fade-right" data-aos-duration="1500" className="icon-header"> Komplett service för att ta ditt företag till nästa nivå, <br></br>
-                        Läs mer om vår expertis</h1>
-                     <section className="flex-4">
-                        <div data-aos="zoom-in" className="icon">
-                            <img src={pageContext.acf.icon_1.source_url} alt="pic" />
-                            <h2 dangerouslySetInnerHTML={{__html: pageContext.acf.icon_1.title}}/>
-                            <p dangerouslySetInnerHTML={{__html: pageContext.acf.icon_1.caption}}/>
+                    <div className="background"></div>
+                        <div>
+                           <h1 data-aos="fade-in" data-aos-duration="1500" className="header-service"> Komplett service för att ta ditt företag till nästa nivå, <br></br>
+                                <a href="/services">Läs mer om vår expertis</a></h1>
+                            <div className="icons-single">
+                            <Services />
+                          </div>
                         </div>
-
-                        <div data-aos="zoom-in" className="icon">
-                            <img src={pageContext.acf.icon_2.source_url} alt="pic" />
-                            <h2 dangerouslySetInnerHTML={{__html: pageContext.acf.icon_2.title}}/>
-                            <p dangerouslySetInnerHTML={{__html: pageContext.acf.icon_2.caption}}/>
-                        </div>  
-
-                        <div data-aos="zoom-in" className="icon">
-                            <img src={pageContext.acf.icon_3.source_url} alt="pic" />
-                            <h2 dangerouslySetInnerHTML={{__html: pageContext.acf.icon_3.title}}/>
-                            <p dangerouslySetInnerHTML={{__html: pageContext.acf.icon_3.caption}}/>
-                        </div>
-                      </section>    
-                    </div>
-
-                    <div className="test"></div>
                     
-                    
-
+                        <div className="background"></div>
 
                     <div 
                         className="Sammarbeten" 

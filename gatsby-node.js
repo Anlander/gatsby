@@ -40,23 +40,6 @@ exports.createPages = ({ graphql, actions }) => {
                   hero_title
                   second_title
 
-                      icon_1 {
-                        title
-                        caption
-                        source_url
-                        
-                      }
-                      icon_2 {
-                        title
-                        caption
-                        source_url
-                      }
-                      icon_3 {
-                        title
-                        caption
-                        source_url
-                      }
-
                       logo_gallery {
                         source_url
                       }
@@ -80,6 +63,7 @@ exports.createPages = ({ graphql, actions }) => {
         // Create Page pages.
         const pageTemplate = path.resolve("./src/templates/page.js")
         const teamsTemplate = path.resolve("./src/templates/teams.js")
+        const servicesTemplate = path.resolve("./src/templates/servicePage.js")
         const HomepageTemplate = path.resolve("./src/templates/home.js")
         // We want to create a detailed page for each
         // page node. We'll just use the WordPress Slug for the slug.
@@ -98,8 +82,9 @@ exports.createPages = ({ graphql, actions }) => {
             path: `/${edge.node.slug}/`,
             component: slash(
               edge.node.template === 'my_teams.php' ? teamsTemplate :
-              edge.node.template === 'Home.php' ? HomepageTemplate
-             : pageTemplate
+              edge.node.template === 'Home.php' ? HomepageTemplate : 
+              edge.node.template === 'my_services.php' ? servicesTemplate : 
+              pageTemplate
              ),
             context: edge.node,
           })
@@ -112,35 +97,35 @@ exports.createPages = ({ graphql, actions }) => {
         graphql(
           `
           {
-            allWordpressWpPortfolio {
-            edges {
+            allWordpressWpServices {
+              edges {
                 node {
-                id
-                slug
-                title
-                content
                 excerpt
-                featured_media {
+                id
+                title
+                slug
+                  featured_media {
                     source_url
                   }
                 }
+              }
             }
-            }
-        }
+          }
+          
           `
         ).then(result => {
           if (result.errors) {
             console.log(result.errors)
             reject(result.errors)
           }
-          const portfolioTemplate = path.resolve("./src/templates/portfolio.js")
+          const servicesTemplate = path.resolve("./src/templates/services.js")
           // We want to create a detailed page for each
           // post node. We'll just use the WordPress Slug for the slug.
           // The Post ID is prefixed with 'POST_'
-          _.each(result.data.allWordpressWpPortfolio.edges, edge => {
+          _.each(result.data.allWordpressWpServices.edges, edge => {
             createPage({
-              path: `/portfolio/${edge.node.slug}/`,
-              component: slash(portfolioTemplate),
+              path: `/services/${edge.node.slug}/`,
+              component: slash(servicesTemplate),
               context: edge.node,
             })
           })
@@ -148,5 +133,47 @@ exports.createPages = ({ graphql, actions }) => {
         })
       })
     // ==== END POSTS ====
+
+     // ==== POSTS (WORDPRESS NATIVE AND ACF) ====
+     .then(() => {
+      graphql(
+        `
+        {
+          allWordpressWpPortfolio {
+          edges {
+              node {
+              id
+              slug
+              title
+              content
+              excerpt
+              featured_media {
+                  source_url
+                }
+              }
+          }
+          }
+      }
+        `
+      ).then(result => {
+        if (result.errors) {
+          console.log(result.errors)
+          reject(result.errors)
+        }
+        const portfolioTemplate = path.resolve("./src/templates/portfolio.js")
+        // We want to create a detailed page for each
+        // post node. We'll just use the WordPress Slug for the slug.
+        // The Post ID is prefixed with 'POST_'
+        _.each(result.data.allWordpressWpPortfolio.edges, edge => {
+          createPage({
+            path: `/portfolio/${edge.node.slug}/`,
+            component: slash(portfolioTemplate),
+            context: edge.node,
+          })
+        })
+        resolve()
+      })
+    })
+  // ==== END POSTS ====
   })
 }
