@@ -1,0 +1,8 @@
+.logo_image_single {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    overflow: hidden;
+    img {
+        padding: 50px;
+    }
+}

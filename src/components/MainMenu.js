@@ -74,10 +74,13 @@ const MainMenu = () => (
             {props.allWordpressMenusMenusItems.edges[0].node.items.map(item =>(
                 <MenuItem to={`/${item.slug}`} key={item.title}>
                     {item.title}
+
                 </MenuItem>
             ))}
             </MainMenuInner>
         </MainMenuWrapper>
+
+        
     )} />
 );
 

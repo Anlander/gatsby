@@ -39,18 +39,31 @@ exports.createPages = ({ graphql, actions }) => {
                   button_url
                   hero_title
                   second_title
-                  icons_1 {
-                    source_url
-                  }
-                  icon_3 {
-                    source_url
-                  }
-                  icon_2 {
-                    source_url
-                  }
-                  picture_logo {
-                    source_url
-                  }
+
+                      icon_1 {
+                        title
+                        caption
+                        source_url
+                        
+                      }
+                      icon_2 {
+                        title
+                        caption
+                        source_url
+                      }
+                      icon_3 {
+                        title
+                        caption
+                        source_url
+                      }
+
+                      logo_gallery {
+                        source_url
+                      }
+                      picture_logo {
+                        source_url
+                      }
+                      
                 }
               }
             }

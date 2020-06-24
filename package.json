@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
     "babel-plugin-styled-components": "^1.10.7",
     "bluebird": "^3.7.2",
     "gatsby": "^2.23.3",
@@ -23,6 +24,7 @@
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
+    "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
     "react-loading-screen": "0.0.17",

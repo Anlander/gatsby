@@ -25,3 +25,63 @@
 // );
 
 // export default templateSite;
+
+
+
+
+// -------- PARTNERS
+
+
+
+// import React from 'react'
+// import { graphql, StaticQuery, Link } from 'gatsby';
+
+
+
+
+
+
+// const Partners = (data) => (
+    
+//     <StaticQuery query={graphql`
+    
+//             {
+//                 allWordpressPage {
+//                     edges {
+//                       node {
+//                           title
+//                         acf {
+//                           partners {
+//                             partner_icon {
+//                               source_url
+//                             }
+//                           }
+//                         }
+//                       }
+//                     }
+//                   }
+
+
+//             }
+                
+            
+      
+        
+//     `}render={props => (
+        
+         
+//         props.allWordpressPage.edges[0].node.acf.partners[0].map(partneritems => (
+//             <img src={partneritems.partner_icon.source_url} alt="test"/>
+//         ))
+
+        
+       
+        
+    
+        
+        
+        
+//     )} />
+// );
+
+// export default Partners;
