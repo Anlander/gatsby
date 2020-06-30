@@ -11,14 +11,26 @@ const Partners = () => (
     
     <StaticQuery query={graphql`
     {
-      wordpressPage {
-        acf {
-          logo_gallery {
-            source_url
+      allWordpressPage(filter: {title: {eq: "Home"}}) {
+        edges {
+          node {
+            title
+            acf {
+              logo_gallery {
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 500) {
+                      src
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
     }
+    
     
     
         
@@ -27,12 +39,20 @@ const Partners = () => (
         
     `}render={data => (
         
-      
       <div className="logo_image_single" >
-      {data.wordpressPage.acf.logo_gallery.map((items, key)  => (
-        <div key={key}>
-          <img src={items.source_url} alt="thumbnail" />
-        </div>
+      {data.allWordpressPage.edges.map((edge, key)  => (
+        edge.node.acf.logo_gallery.map(({localFile}) =>
+        <img
+        src={
+          localFile.childImageSharp.fluid.src
+        }
+        alt={localFile.name}
+        className="slick-image"
+      />
+
+        )
+    
+
 
       ))}
     </div>
