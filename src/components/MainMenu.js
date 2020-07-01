@@ -1,34 +1,22 @@
 import React from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby';
 import styled from 'styled-components';
-import SiteInfo from './SiteInfo';
 import "../components/sass/main-menu.scss";
 
 
-
-
-
-const MainMenuWrapper = styled.div`
- display:flex;
- height: 10vh;
-`
-
 const MenuItem = styled(Link)`
     color:white;
-    display:flex;
-    padding: 8px 16px;
+    
     text-decoration: none;
     text-transform: uppercase;
-    
+    background:none;
 
 `
 
 const MainMenuInner = styled.div `
-    margin: 0 auto;
-    display:flex;
-    width:80%;
-    align-self: center;
 
+
+    background:none;
 `
 // function scroll () {
 //     if (window.pageYOffset > 0) {
@@ -69,21 +57,22 @@ const MainMenu = () => (
     `}render={props =>(
         // vill du ändra vilken menu, EQ : FOOTER EX. (NAMNET)
         // Temp Fix för home link, i och med att jag ändrat settings för frontpage i CMS skapar det en http link för just myportfolio. FIX ASAP 
-        <MainMenuWrapper className="main_menu">
-              <MainMenuInner>
-            <SiteInfo />
-            <MenuItem to="/home">Home</MenuItem>
+
+        <div class="flex">
+            <MainMenuInner>
+            <li><MenuItem to="/home">Home</MenuItem></li>
             {props.allWordpressMenusMenusItems.edges[0].node.items.map(item =>(
                 <MenuItem to={`/${item.slug}`} key={item.title}>
-                    {item.title}
+                  <li>{item.title}</li>  
 
                 </MenuItem>
             ))}
             </MainMenuInner>
-        </MainMenuWrapper>
-
+        </div>
         
     )} />
+      
+            
 );
 
 export default MainMenu;

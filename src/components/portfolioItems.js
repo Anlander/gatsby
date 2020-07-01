@@ -35,8 +35,7 @@ const PortfolioItems = () => (
     `}render={props => props.allWordpressWpPortfolio.edges.map(PortfolioItems => (
         <div class="container" key={PortfolioItems.node.id}>
         <div class="row team-row">
-
-            <div class="col-md-4 col-sm-6 team-wrap">
+            <div>
             <div class="team-member text-center">
                 <div class="team-img">
                 <img src={PortfolioItems.node.featured_media.source_url} alt="" />

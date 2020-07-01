@@ -47,3 +47,27 @@
 
 
 }
+
+
+.text-align-center {
+    text-align:center;
+    color: black;
+    font-size: 13px;
+    padding: 30px;
+    // box-shadow: 0px 0px 4px -1px;
+    h2 {
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+    
+    a {
+        color: black;
+        text-transform: uppercase;
+        transition: all 1000ms;
+        &:hover {
+            opacity: 0.7;
+            text-decoration: none;
+            color: grey;
+        }
+    }
+}
