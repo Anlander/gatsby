@@ -104,8 +104,12 @@ exports.createPages = ({ graphql, actions }) => {
                 id
                 title
                 slug
-                  featured_media {
-                    source_url
+                  acf {
+                    about_service
+                    title
+                    service_image {
+                      source_url
+                    }
                   }
                 }
               }

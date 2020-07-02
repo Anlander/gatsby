@@ -8,6 +8,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     'gatsby-plugin-page-transitions',
+    'gatsby-plugin-sharp',
 
     {
       resolve: 'gatsby-plugin-page-transitions',
@@ -15,6 +16,16 @@ module.exports = {
         transitionTime: 1500
       }
     },
+
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+        defaultQuality: 75,
+      },
+    },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -126,7 +137,8 @@ module.exports = {
           "**/users",
           "**/menus",
           "**/portfolio",
-          "**/services"
+          "**/services",
+          "**/logo"
         ],
         // Blacklisted routes using glob patterns
         excludedRoutes: [],

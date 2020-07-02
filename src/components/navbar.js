@@ -48,7 +48,6 @@ export default class navbar extends Component {
           <Navigation />
         </OffCanvas>
           </div>
-        
       </Fragment>
     )
   }

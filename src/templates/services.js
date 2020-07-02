@@ -17,7 +17,7 @@ export default ({pageContext}) => (
          <h1>
             {pageContext.title}
            </h1>
-          <FeutreImge src={pageContext.featured_media.source_url} alt="thumbnail" />
+          <FeutreImge src={pageContext.acf.service_image.source_url} alt="thumbnail" />
     </div>
         
     </Layout>

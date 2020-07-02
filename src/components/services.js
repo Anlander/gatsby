@@ -38,11 +38,16 @@ const Services = () => (
         
     `}render={props => props.allWordpressWpServices.edges.map(ServiceItems => (
         <Col key={ServiceItems.node.id} className="text-align-center" data-aos-duration="1500" >
-              <img  data-aos="fade-left" src={ServiceItems.node.acf.service_image.source_url} alt="" />
-                <h2 dangerouslySetInnerHTML={{__html: ServiceItems.node.title}}/>
-                <Link to={`/services/${ServiceItems.node.slug}`} >
-                    Read More
-                </Link>
+          <Link to={`/services/${ServiceItems.node.slug}`} >
+          <div className="div-grid">
+            <img  data-aos="fade-left" src={ServiceItems.node.acf.service_image.source_url} alt="" />
+              <h2 dangerouslySetInnerHTML={{__html: ServiceItems.node.title}}/>
+                <div className="overlay" >
+                  <h4 className="h4-text-overlay">LÄS MER {ServiceItems.node.title} </h4>
+                  <div className="text"><img src="/long-arrow.png"/></div>
+              </div>
+          </div>
+          </Link>
           </Col>
                
             
