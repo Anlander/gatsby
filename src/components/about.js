@@ -3,6 +3,7 @@ import { StaticQuery, graphql } from "gatsby"
 import { Container, Row, Col } from 'react-bootstrap';
 import "../components/sass/about.scss"
 import 'bootstrap/dist/css/bootstrap.min.css'
+
 const About = () => (
   <StaticQuery
     query={graphql`
@@ -32,14 +33,20 @@ const About = () => (
       <div className="container-about">
         {data.allWordpressPage.edges.map((edge, key)  => (
         <Container className="container-about"> 
-            <Row clasName="row-1-about">
+            <Row 
+              className="row-1-about" 
+              data-aos="fade-up"
+            >
              <Col><h4>{edge.node.acf.about_text_right}</h4></Col>
               <Col>
                 <img src={edge.node.acf.about_image_left.source_url} alt="Thumbnail" />
               </Col>
             </Row>
             
-            <Row clasName="row-1-about">
+            <Row 
+              className="row-2-about"
+              data-aos="fade-up"
+            >
               <Col>
                 <img src={edge.node.acf.about_image_right.source_url} alt="Thumbnail" />
                </Col>
