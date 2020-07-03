@@ -1,10 +1,9 @@
 import React from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby';
 import '../components/sass/services.scss'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import "../components/sass/homepage.scss"
 import { Col } from 'react-bootstrap';
+import LongArrow from "../../public/static/long-arrow.png";
 
 
 
@@ -43,7 +42,7 @@ const Services = () => (
               <h2 dangerouslySetInnerHTML={{__html: ServiceItems.node.title}}/>
                 <div className="overlay" >
                   <h4 className="h4-text-overlay">LÄS MER {ServiceItems.node.title} </h4>
-                  <div className="text"><img src="/long-arrow.png"/></div>
+                  <div className="text"><img src={LongArrow} alt="thumbnail"/></div>
               </div>
           </div>
           </Link>

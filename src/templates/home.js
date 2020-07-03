@@ -11,6 +11,9 @@ import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import MainMenu from '../components/MainMenu'
 
+import arrowdown from "../../public/static/arrow-down.png";
+import Longarrow from "../../public/static/long-arrow.png";
+
 
 
 
@@ -28,7 +31,7 @@ export default ({pageContext}) => (
                             <Col className="col-header col-6">
                                 <img src={pageContext.acf.picture_logo.source_url} alt='thumbnail' />
                                 <h2>{pageContext.acf.hero_title}</h2>
-                                <a href="#menu-section"><img className="icon-down" src="arrow-down.png" alt='thumbnail' /></a>
+                                <a href="#menu-section"><img className="icon-down" src={arrowdown} alt='thumbnail' /></a>
                                </Col>
                              <Col >
                             {/* <a href="https://instagram.com" id="blog">IG</a>                            */}
@@ -58,7 +61,7 @@ export default ({pageContext}) => (
                        {/* SERVICE SECTION */}
                          <Container className="service-container">
                          <h1 className="header-service"> Komplett service för att ta ditt företag till nästa nivå <br></br>
-                                <a href="/services">Läs mer om vår expertis <img src="/long-arrow.png" alt="thumb" /></a>
+                                <a href="/services">Läs mer om vår expertis <img src={Longarrow} alt="thumb" /></a>
                                 <div className="border-width"></div>
                                 </h1> 
                               <Row className="service-row">    
