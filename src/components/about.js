@@ -29,7 +29,7 @@ const About = () => (
     `}
     render={data => (
         
-        <div>
+      <div className="container-about">
         {data.allWordpressPage.edges.map((edge, key)  => (
         <Container className="container-about"> 
             <Row clasName="row-1-about">

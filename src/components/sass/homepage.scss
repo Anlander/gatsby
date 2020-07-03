@@ -255,14 +255,14 @@ body::-webkit-scrollbar {
     display:table;
 
     li {
-        display: inline;
+        display: inline !important;
     }
 
     a {
-        display: inline;
-        text-align: center;
-        padding-left: 15px;
-        font-size: 15px;
+        display: inline !important;
+        text-align: center !important;
+        padding-left: 15px !important;
+        font-size: 15px !important;
     }
 
     h1 {
