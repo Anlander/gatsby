@@ -7,6 +7,7 @@ import Partners from '../components/partners'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Services from '../components/services'
+import About from '../components/about'
 import Navbar from '../components/navbar'
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -30,53 +31,64 @@ export default ({pageContext}) => (
                                 <img src={pageContext.acf.picture_logo.source_url} alt='thumbnail' />
                                 <h2>{pageContext.acf.hero_title}</h2>
                                 <a href="#menu-section"><img className="icon-down" src="arrow-down.png" alt='thumbnail' /></a>
-                            </Col>
-                            <Col >
-                            {/* <a href="https://instagram.com" id="about">IG</a> */}
-                           
+                               </Col>
+                             <Col >
+                            {/* <a href="https://instagram.com" id="blog">IG</a>                            */}
                             </Col>
                         </Row>
                     </Container> 
 
+
+                    {/* STICKY MENU SECTION */}
                     <Container className="stickynavbar" id="menu-section">
                         <Row>
                             <Col className="onscroll-nav">< MainMenu /></Col>
                         </Row>
                     </Container>
-                        
+                    {/* END */}   
+
+                    {/* ABOUT SECTION */}
+                    <Container className="about-container">
+                        <Row>
+                            <Col>
+                                <About />
+                            </Col>
+                        </Row>
+                    </Container>
+                     {/* END */}   
                     
-                    
+                       {/* SERVICE SECTION */}
                          <Container className="service-container">
                          <h1 data-aos="fade-in" data-aos-duration="1500" className="header-service"> Komplett service för att ta ditt företag till nästa nivå <br></br>
-                                <a href="/services">Läs mer om vår expertis <img src="/long-arrow.png"/></a>
+                                <a href="/services">Läs mer om vår expertis <img src="/long-arrow.png" alt="thumb" /></a>
                                 <div className="border-width"></div>
-                                </h1>
-                                
-                              <Row className="service-row">
-                                  
+                                </h1> 
+                              <Row className="service-row">    
                                 <Services />
-                              </Row>    
-                              
+                              </Row>     
                          </Container>
+                         {/* END */}   
                              
                         
                         <div className="background">
                            
                         </div>
                        
-                       <div 
-                        className="Sammarbeten" 
 
-                     > 
-                         <section className="flex-3">
-                            <div className="logo_images">
-                              {/* <Partners />   */}
-                              <h1>dadwd</h1>
-                          </div>          
-                       </section>     
-                    </div>
-                  </div> 
-                
+                {/* PARTNER SECTION */}   
+                <div 
+                className="Sammarbeten" 
+                > 
+                    <section className="flex-3">
+                    <div className="logo_images">
+                        {/* <Partners />   */}
+                        <h1>dadwd</h1>
+                    </div>          
+                </section>     
+                </div>
+                </div> 
+                {/* END */}   
+
             </PageTransition>
            
             

@@ -11,11 +11,8 @@
 
     li {
         margin-bottom: 30px;
-        text-align: center !important;
-        width: 30%;
         margin: 0 auto;
         display: flex;
-        justify-content: center;
         align-self: center;
 
     }
@@ -35,6 +32,7 @@
         background-position: 100%;
         transition: background-position 275ms ease;
         text-decoration: none !important; 
+        letter-spacing: 3px;
         &:hover {
           background-position: 0 100%;
         }

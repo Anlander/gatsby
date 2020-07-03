@@ -39,6 +39,7 @@ exports.createPages = ({ graphql, actions }) => {
                   button_url
                   hero_title
                   second_title
+                  about_vr
 
                       logo_gallery {
                         source_url
