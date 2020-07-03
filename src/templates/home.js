@@ -4,8 +4,6 @@ import "../components/sass/homepage.scss"
 import PageTransition from 'gatsby-plugin-page-transitions';
 import '../images/gatsby-icon.png'
 import Partners from '../components/partners'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import Services from '../components/services'
 import About from '../components/about'
 import Navbar from '../components/navbar'
@@ -27,7 +25,7 @@ export default ({pageContext}) => (
                         <Row className="flex-1">
                         <Col className="col-1">
                         </Col>
-                            <Col data-aos="fade-right" data-aos-duration="1500" className="col-header col-6">
+                            <Col className="col-header col-6">
                                 <img src={pageContext.acf.picture_logo.source_url} alt='thumbnail' />
                                 <h2>{pageContext.acf.hero_title}</h2>
                                 <a href="#menu-section"><img className="icon-down" src="arrow-down.png" alt='thumbnail' /></a>
@@ -59,7 +57,7 @@ export default ({pageContext}) => (
                     
                        {/* SERVICE SECTION */}
                          <Container className="service-container">
-                         <h1 data-aos="fade-in" data-aos-duration="1500" className="header-service"> Komplett service för att ta ditt företag till nästa nivå <br></br>
+                         <h1 className="header-service"> Komplett service för att ta ditt företag till nästa nivå <br></br>
                                 <a href="/services">Läs mer om vår expertis <img src="/long-arrow.png" alt="thumb" /></a>
                                 <div className="border-width"></div>
                                 </h1> 
