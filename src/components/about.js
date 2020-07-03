@@ -34,11 +34,15 @@ const About = () => (
         <Container className="container-about"> 
             <Row clasName="row-1-about">
              <Col><h4>{edge.node.acf.about_text_right}</h4></Col>
-              <Col><img src={edge.node.acf.about_image_left.source_url} alt="Thumbnail" /></Col>
+              <Col>
+                <img src={edge.node.acf.about_image_left.source_url} alt="Thumbnail" />
+              </Col>
             </Row>
             
             <Row clasName="row-1-about">
-              <Col><img src={edge.node.acf.about_image_right.source_url} alt="Thumbnail" /></Col>
+              <Col>
+                <img src={edge.node.acf.about_image_right.source_url} alt="Thumbnail" />
+               </Col>
               <Col><h4>{edge.node.acf.about_text_left}</h4></Col>
            </Row>
           </Container>  
