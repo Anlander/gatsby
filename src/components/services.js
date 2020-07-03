@@ -6,7 +6,6 @@ import 'aos/dist/aos.css';
 import "../components/sass/homepage.scss"
 import { Col } from 'react-bootstrap';
 
-AOS.init();
 
 
 

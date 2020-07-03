@@ -32,11 +32,6 @@ const Partners = () => (
     }
     
     
-    
-        
-            
-      
-        
     `}render={data => (
         
       <div className="logo_image_single" >
