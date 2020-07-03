@@ -35,7 +35,11 @@ const Services = () => (
       
         
     `}render={props => props.allWordpressWpServices.edges.map(ServiceItems => (
-        <Col key={ServiceItems.node.id} className="text-align-center">
+        <Col 
+            key={ServiceItems.node.id} 
+            className="text-align-center" 
+            data-aos="zoom-in"
+          >
           <Link to={`/services/${ServiceItems.node.slug}`} >
           <div className="div-grid">
             <img src={ServiceItems.node.acf.service_image.source_url} alt="" />

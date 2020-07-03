@@ -20,7 +20,7 @@ import "aos/dist/aos.css";
 
 
 export default ({pageContext}) => (
-    
+
         useEffect(() => {
           AOS.init();
           AOS.refresh();
@@ -60,9 +60,15 @@ export default ({pageContext}) => (
                      {/* END */}   
                     
                        {/* SERVICE SECTION */}
-                         <Container className="service-container">
-                         <h1 className="header-service"> Komplett service för att ta ditt företag till nästa nivå <br></br>
-                                <a href="/services">Läs mer om vår expertis <img src={LongArrow} alt="thumb" /></a>
+                         <Container className="service-container" >
+                         <h1 className="header-service" data-aos="fade-in"> Komplett service för att ta ditt företag till nästa nivå <br></br>
+                                <a href="/services" >Läs mer om vår expertis 
+                                    <img 
+                                     src={LongArrow} 
+                                     alt="thumb" 
+                                     data-aos="fade-left"
+                                     />
+                                </a>
                                 <div className="border-width"></div>
                                 </h1> 
                               <Row className="service-row">    

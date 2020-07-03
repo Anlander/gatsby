@@ -14,22 +14,8 @@ const MenuItem = styled(Link)`
 `
 
 const MainMenuInner = styled.div `
-
-
     background:none;
 `
-// function scroll () {
-//     if (window.pageYOffset > 0) {
-//         if (scroll >= 150) {
-//             this("main_menu").addClass("black");
-//         } else {
-//             this("main_menu").removeClass("black");
-//         }
-//     }
-//   }
-
-// onScroll={() => this.scroll}
-
 
 const MainMenu = () => (
     

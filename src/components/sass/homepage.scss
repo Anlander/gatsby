@@ -196,6 +196,7 @@ body::-webkit-scrollbar {
     img {
         max-width: 15px;
         padding-bottom: 4px;
+        padding-left: 4px;
     }
 }
 
@@ -262,13 +263,13 @@ body::-webkit-scrollbar {
         display: inline !important;
         text-align: center !important;
         padding-left: 15px !important;
-        font-size: 15px !important;
+        font-size: 12px !important;
     }
 
     h1 {
         font-size: 20px;
         text-transform: uppercase;
-        letter-spacing: 3px;
+        letter-spacing: 2px;
         font-weight: 800;
         align-self: center;
         
@@ -277,7 +278,7 @@ body::-webkit-scrollbar {
 
         display: flex;
         align-items: center;
-        height: 10vh;
+        height: 5vh;
 
         .flex {
             justify-content: flex-end;
