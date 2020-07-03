@@ -3,7 +3,7 @@ import { graphql, StaticQuery, Link } from 'gatsby';
 import '../components/sass/services.scss'
 import "../components/sass/homepage.scss"
 import { Col } from 'react-bootstrap';
-import LongArrow from "../../public/static/long-arrow.png";
+import LongArrow from "../images/long-arrow.png";
 
 
 
