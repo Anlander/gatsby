@@ -49,13 +49,8 @@ export default ({pageContext}) => (
                     {/* END */}   
 
                     {/* ABOUT SECTION */}
-                    <Container className="about-container">
-                        <Row>
-                            <Col>
-                                <About />
-                            </Col>
-                        </Row>
-                    </Container>
+                        <About />
+
                      {/* END */}   
                     
                        {/* SERVICE SECTION */}
