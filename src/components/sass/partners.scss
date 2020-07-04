@@ -1,8 +1,32 @@
 .logo_image_single {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    overflow: hidden;
+background: white;
+height: 10vh;
+
+    .partners-row {
+        display: flex;
+        height: 100%;
+        align-items: flex;
+        max-width: 100%;
+    }
     img {
         padding: 50px;
+        width: 220px;
     }
+}
+
+
+.Sammarbeten-text {
+    color: black;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100% !important;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 5px !important  ;
+    font-weight: 400;
+    font-size: 16px;
+
+
 }

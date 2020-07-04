@@ -151,13 +151,20 @@ body::-webkit-scrollbar {
 
 
     .background {
-        height: 0vh;
+        height: 50vh;
+        width: 100%;
         background-size: cover;
         margin-top: 100px;
-        background-image: url("/background.jpg");
+        background-image: url("../../images/cooperation.png");
         background-attachment: fixed;
         background-size: cover;
-        align-items: center;
+        align-items: flex-end;
+        display: flex;
+        padding: 0 !important;
+
+        h4 {
+            padding: 10px;
+        }
 
     }
 
@@ -201,7 +208,16 @@ body::-webkit-scrollbar {
 }
 
 //bottom line spliter
-
+.partner-width{
+    width: 70px !important;
+    height: 2px;   
+    position: relative !important;
+    z-index : 1;
+    background: black;
+    opacity: 0.7;
+    display: flex;
+    margin: 0 auto !important;
+}
 .border-width {
     width: 80px !important;
     height: 3px;   
@@ -228,13 +244,6 @@ body::-webkit-scrollbar {
     align-items: flex-end !important;
 
     }
-}
-
-.background {
-    background-image: url('/background.jpg');
-    height: 50vh;
-    width: 100% !important;
-    background-size: cover;
 }
 
 
@@ -365,4 +374,9 @@ body::-webkit-scrollbar {
 	100% {
 		transform: scale(0.70);
 	}
+}
+
+
+.height  {
+    height: 100vh;
 }

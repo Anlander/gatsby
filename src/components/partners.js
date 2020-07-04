@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby';
 import "../components/sass/partners.scss"
-
+import { Col, Container, Row } from 'react-bootstrap';
 
 
 
@@ -34,9 +34,13 @@ const Partners = () => (
     
     `}render={data => (
         
-      <div className="logo_image_single" >
+      <Container className="logo_image_single" >
+        <Row classNAme="partners-row">
+        
       {data.allWordpressPage.edges.map((edge, key)  => (
         edge.node.acf.logo_gallery.map(({localFile}) =>
+        
+        <Col data-aos="fade-in">
         <img
         src={
           localFile.childImageSharp.fluid.src
@@ -44,13 +48,16 @@ const Partners = () => (
         alt={localFile.name}
         className="slick-image"
       />
+      </Col>
+      
 
         )
     
 
 
       ))}
-    </div>
+      </Row>
+    </Container>
 
         
         

@@ -78,24 +78,19 @@ export default ({pageContext}) => (
                          {/* END */}   
                              
                         
-                        <div className="background">
-                           
-                        </div>
-                       
-
-                {/* PARTNER SECTION */}   
-                <div 
-                className="Sammarbeten" 
-                > 
-                    <section className="flex-3">
-                    <div className="logo_images">
-                        {/* <Partners />   */}
-                        <h1>dadwd</h1>
-                    </div>          
-                </section>     
+                        <Container className="background">
+                        <Row>
+                            <Col data-aos="fade-in" ><h4 className="Sammarbeten-text">Våra Samarbeten</h4></Col> 
+                        </Row>
+                        <Row>
+                        
+                        </Row>
+                        
+                        </Container>
+                        
+                        <Partners />
+                
                 </div>
-                </div> 
-                {/* END */}   
 
             </PageTransition>
            
